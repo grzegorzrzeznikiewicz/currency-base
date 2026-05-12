@@ -5,8 +5,8 @@ import ResultBox from './../ResultBox/ResultBox';
 const CurrencyBox = () => {
   const [data, setData] = useState({
     amount: 0,
-    from: 'Zł',
-    to: '$'
+    from: 'PLN',
+    to: 'USD'
   });
 
   const handleDataChange = data => {

@@ -15,6 +15,14 @@ const ResultBox = ({ from, to, amount }) => {
 
   const formattedAmount = useMemo(() => formatAmountInCurrency(amount, from), [amount, from]);
 
+  if (from === to) {
+    return (
+      <div className={styles.result}>
+        Please select two different currencies.
+      </div>
+    );
+  }
+
   return (
     <div className={styles.result}>
       {formattedAmount} = {convertedAmount}
