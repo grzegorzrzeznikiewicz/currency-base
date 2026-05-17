@@ -8,12 +8,12 @@ describe('ConvertPLNtoUSD', () => {
         expect(convertPLNToUSD(12)).toBe('$3.43');
     });
     it('should return NaN value when input is text', () => {
-        expect(convertPLNToUSD('1')).toBe('NaN');
-        expect(convertPLNToUSD('xyz')).toBe('NaN');
-        expect(convertPLNToUSD('-8')).toBe('NaN');
+        expect(convertPLNToUSD('1')).toBeNaN();
+        expect(convertPLNToUSD('xyz')).toBeNaN();
+        expect(convertPLNToUSD('-8')).toBeNaN();
     });
     it('should return NaN value when input is empty', () => {
-        expect(convertPLNToUSD()).toBe('NaN');
+        expect(convertPLNToUSD()).toBeNaN();
     });
     it('should return "Error" when input is different than number and string', () => {
         expect(convertPLNToUSD({})).toBe('Error');
